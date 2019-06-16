@@ -1,6 +1,6 @@
 {
   "name": "jsgrafana",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Javascript Grafana API",
   "main": "index.js",
   "directories": {

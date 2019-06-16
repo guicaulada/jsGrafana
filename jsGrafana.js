@@ -229,7 +229,7 @@ class GrafanaAPI extends ExtendableProxy {
       getCurrentUserTokens: [`GET`, `/api/user/auth-tokens`],
       revokeCurrentUserToken: [`POST`, `/api/user/revoke-auth-token`, params[0]],
       //Plugins
-      updatePluginSettings: [`POST`, `/api/plugins/${params[0]}/settings?${this.serialize(params[1])}`, params[2]]
+      updatePluginSettings: [`POST`, `/api/plugins/${params[0]}/settings`, params[1]]
     }
 
     if (method[action] == undefined) {
