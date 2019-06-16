@@ -35,7 +35,7 @@ gfapi.getUser('PQ6ASX3', {include: ['contact_methods','teams','notification_rule
 })
 ```
 
-Refer to the [Grafana API Documentation](https://grafana.com/docs/http_api/) and the [jsGrafana Examples](https://github.com/Sighmir/jsGrafana/tree/master/examples) for more information.  
+Refer to the [Grafana API Documentation](https://grafana.com/docs/http_api/) and the [jsGrafana Example](https://github.com/Sighmir/jsGrafana/tree/master/example) for more information.  
 
 ### Browser
 
