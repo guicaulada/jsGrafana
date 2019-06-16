@@ -48,10 +48,18 @@ class GrafanaAPI extends ExtendableProxy {
         http_request.send(JSON.stringify(params))
         http_request.onreadystatechange = function () {
           if (http_request.readyState == 4) {
-            try {
-              resolve(JSON.parse(http_request.responseText))
-            } catch {
-              resolve(http_request.responseText)
+            if (Number(http_request.status.toString()[0]) == 2) {
+              try {
+                resolve(JSON.parse(http_request.responseText))
+              } catch {
+                resolve(http_request.responseText)
+              }
+            } else {
+              try {
+                reject(JSON.parse(http_request.responseText))
+              } catch {
+                reject(http_request.responseText)
+              }
             }
           }
         }
